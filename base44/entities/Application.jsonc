@@ -1,0 +1,60 @@
+{
+  "name": "Application",
+  "type": "object",
+  "properties": {
+    "scholarship_name": {
+      "type": "string"
+    },
+    "scholarship_id": {
+      "type": "string"
+    },
+    "applicant_name": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "under_verification",
+        "approved",
+        "rejected"
+      ],
+      "default": "pending"
+    },
+    "submitted_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "documents": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "payment_status": {
+      "type": "string",
+      "enum": [
+        "not_started",
+        "processing",
+        "disbursed"
+      ],
+      "default": "not_started"
+    },
+    "renewal_status": {
+      "type": "string",
+      "enum": [
+        "not_applicable",
+        "eligible",
+        "renewed"
+      ],
+      "default": "not_applicable"
+    },
+    "rejection_reason": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "scholarship_name",
+    "applicant_name"
+  ]
+}

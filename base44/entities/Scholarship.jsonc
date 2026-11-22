@@ -1,0 +1,62 @@
+{
+  "name": "Scholarship",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "pre-matric",
+        "post-matric",
+        "fellowship",
+        "top-class",
+        "state"
+      ],
+      "default": "post-matric"
+    },
+    "eligibility_criteria": {
+      "type": "string"
+    },
+    "income_criteria": {
+      "type": "string"
+    },
+    "educational_qualification": {
+      "type": "string"
+    },
+    "required_documents": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "application_start_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "application_closing_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "scholarship_amount": {
+      "type": "string"
+    },
+    "official_link": {
+      "type": "string"
+    },
+    "application_route": {
+      "type": "string"
+    },
+    "icon_color": {
+      "type": "string",
+      "default": "emerald"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}
